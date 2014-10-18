@@ -1,6 +1,5 @@
 package com.killercerealgames.scripts;
 
-
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.uwsoft.editor.renderer.actor.CompositeItem;
 import com.uwsoft.editor.renderer.actor.IBaseItem;

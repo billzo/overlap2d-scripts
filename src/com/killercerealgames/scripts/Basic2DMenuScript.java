@@ -1,5 +1,10 @@
 package com.killercerealgames.scripts;
 
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.uwsoft.editor.renderer.actor.CompositeItem;
+import com.uwsoft.editor.renderer.actor.IBaseItem;
+import com.uwsoft.editor.renderer.script.IScript;
+
 /*
  * Created by billzo on 10/16/2014
  * Feel free to email me at billzo@killercerealgames.com
@@ -30,7 +35,7 @@ package com.killercerealgames.scripts;
  */
 
 
-public class Basic2DMenuScript {
+public class Basic2DMenuScript implements IScript {
 
 	private CompositeItem menu;
 	private IBaseItem[][] menuItems;
@@ -273,6 +278,14 @@ public class Basic2DMenuScript {
 				actorCurrentlySelected.getCenterY() - Math.abs((selector.getHeight() - actorCurrentlySelected.getHeight()) / 2));
 	}
 	
+	// Acting takes place in the setSelectorPositionToCurrentlySelectedActor method in that regard.
+	// However, it is also possible to have a button, etc. within this context as well.
+	@Override
+	public void act(float delta) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	/**
 	 * Updates the currently selected actor. This does not do a null check automatically by itself.
 	 */
@@ -292,5 +305,10 @@ public class Basic2DMenuScript {
 			return false;
 		}
 	}
+
+	@Override
+	public void dispose() {}
+
+	
 	
 }
